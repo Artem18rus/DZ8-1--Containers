@@ -29,8 +29,8 @@ export class Team {
     }
   
     addAll(...list) {
-      this.members.add(list);
-      console.log(this.members);
+      list.forEach(item => this.members.add(item))
+      return this.members;
     }
 
     toArray() {
@@ -44,5 +44,5 @@ export const eks1 = new Team();
 // eks1.add(member2.type)
 // eks1.add(member3.type)
 // eks1.add(member4.type)
-eks1.addAll(member1.type, member2.type, member2.type)
+//eks1.addAll(member1.type, member2.type, member2.type)
 //eks1.toArray()

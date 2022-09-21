@@ -28,7 +28,20 @@ test('TEST-ERR1', () => {
   expect(f).toThrow('Ошибка! Такой персонаж уже в команде.');
 });
 
+
+
 test('TEST-OK3', () => {
+  const f = () => {
+    eks1.addAll(member1.type, member2.type, member2.type)
+    const obj = Object.fromEntries(eks1.members.entries());
+    return obj;
+  };
+  expect(f()).toEqual({ Daemon: 'Daemon', Magician: 'Magician', Zombie: 'Zombie', дровосек: 'дровосек' });
+});
+
+
+
+test('TEST-OK4', () => {
   const f = () => {
     const member5 = new Character();
     member5.type = "Men";
@@ -40,7 +53,7 @@ test('TEST-OK3', () => {
     const obj = Object.fromEntries(eks1.members.entries())
     return obj;
   }
-  expect(f()).toEqual({"Magician": "Magician", "Men": "Men", "Woman": "Woman", "Zombie": "Zombie", "дровосек": "дровосек"});
+  expect(f()).toEqual({'Daemon': 'Daemon', 'Magician': 'Magician', 'Men': 'Men', 'Woman': 'Woman', 'Zombie': 'Zombie', 'дровосек': 'дровосек'});
 });
 
 
