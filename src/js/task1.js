@@ -26,7 +26,7 @@ export class Team {
     }
   
     addAll(...list) {
-      list.forEach(item => this.members.add(item))
+      list.forEach(item => this.members.add(item));
       return this.members;
     }
 
