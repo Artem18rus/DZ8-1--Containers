@@ -1,6 +1,7 @@
-export class Character{
-    type;
-}
+export class Character {
+  type
+};
+
 export const member1 = new Character();
 member1.type = "Zombie";
 export const member2 = new Character();
@@ -22,10 +23,6 @@ export class Team {
         }
       }
       this.members.add(name);
-      // console.log(this.members)
-      // let obj = Object.fromEntries(this.members.entries())
-      // console.log(obj)
-      //return this.members;
     }
   
     addAll(...list) {
@@ -41,8 +38,8 @@ export class Team {
 export const eks1 = new Team();
 
 //eks1.add(member1.type)
-// eks1.add(member2.type)
-// eks1.add(member3.type)
-// eks1.add(member4.type)
+//eks1.add(member2.type)
+//eks1.add(member3.type)
+//eks1.add(member4.type)
 //eks1.addAll(member1.type, member2.type, member2.type)
 //eks1.toArray()
